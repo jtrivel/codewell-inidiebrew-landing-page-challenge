@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.codewell.cc/challenges/timenow-landing-page--608d9a7d747bad001532bd70/solution/61dfa54c6da8ba3fac6b02e9)
-- Live Site URL: [Live Site URL](https://codwell-timenow-landing-page-challenge.netlify.app/)
+- Solution URL: [Solution URL](https://www.codewell.cc/challenges/indiebrew-landing-page--608aca51650dff001599e8f9/solution/61e0a35c6da8ba3fac6b032f)
+- Live Site URL: [Live Site URL](https://codewell-indiebrew-landing-page-challenge.netlify.app/)
 
 ### Built with
 - SASS
