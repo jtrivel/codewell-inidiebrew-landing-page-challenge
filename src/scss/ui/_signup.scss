@@ -1,0 +1,134 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.signup {
+  padding: 2rem 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    285deg,
+    rgba(235, 202, 247, 1) 0%,
+    rgba(252, 251, 247, 1) 100%
+  );
+
+  &__grid {
+    padding: 5rem 0;
+    @include m.grid(1,4rem);
+    max-width: 76rem;
+    @include m.desktop { 
+      max-width: 140rem;
+      @include m.grid(2,4rem);
+      align-items: center;
+      min-height: 80vh;
+     }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    color: v.$primaryColor;
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    position: relative;
+    padding-left: 3rem;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url(../images/database.png);
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+    }
+
+    &-d {
+      padding-left: 3rem;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(../images/deadline.png);
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-f {
+      padding-left: 3rem;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(../images/bulb.png);
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__span {
+    font-weight: 700;
+    color: v.$primaryColor;
+  }
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  background-color: v.$white;
+  padding:4rem;
+  border-radius: 1rem;
+
+  &__heading {
+    color: v.$primaryColor;
+    font-weight: 700;
+  }
+
+  &__camp {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &-c {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__input {
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid v.$secondaryColor;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__span {
+    font-weight: 700;
+    color:v.$tertiaryColor;
+    cursor: pointer;
+  }
+}

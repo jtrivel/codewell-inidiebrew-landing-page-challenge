@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codewell.cc IndieBrew</title>
+  <script src="https://kit.fontawesome.com/5e6c8487ab.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles/app.css" />
+</head>
+
+<body>
+  <section class="signup">
+    <nav class="nav container">
+      <div class="nav__left">
+        <img src="src/images/logo.svg" class="nav__logo" />
+      </div>
+      <div class="nav__right">
+        <a href="index.html">
+          <div class="nav__arrow">
+            <img src="src/images/backarrow.svg" />
+          </div>
+        </a>
+        <a href="index.html">
+          <p class="nav__back">Back to Homepage</p>
+        </a>
+      </div>
+    </nav>
+
+    <div class="signup__grid container">
+      <div class="signup__top">
+        <h1 class="signup__heading">Create your personalized feed.</h1>
+        <p class="signup__text">
+          <span class="signup__span">Over 20 resources</span>
+          With resources ranging from Reddit to IndieHackers, we've got all
+          your needs covered
+        </p>
+        <p class="signup__text-d">
+          <span class="signup__span">Delivery weekly</span>
+          Every week at exactly Tuesday 12:00 P.M EST - expect a value-packed
+          digest right in your email.
+        </p>
+        <p class="signup__text-f">
+          <span class="signup__span">Unlimited Ideas</span>
+          With all the ideas you'll be reading about, what's stopping you from
+          creating a sustainable startup ?
+        </p>
+      </div>
+      <div class="signup__bottom">
+        <form class="form">
+          <h2 class="form__heading">Create your indieBrew Account</h2>
+          <div class="form__camp">
+            <label for="email" class="form__label">Email</label>
+            <input type="email" name="email" class="form__input" placeholder="john@example.com" />
+          </div>
+          <div class="form__camp">
+            <label for="name" class="form__label">Full name</label>
+            <input type="name" name="name" class="form__input" placeholder="John Doe" />
+          </div>
+          <div class="form__camp">
+            <label for="password" class="form__label">Password</label>
+            <input type="password" name="password" class="form__input" placeholder="At least 8 characters" />
+          </div>
+          <div class="form__camp-c">
+            <input type="checkbox" />
+            <p class="form__text">
+              By creating an account on IndieBrew , you agree to the
+              <span class="form__span">Terms & Conditions</span>
+            </p>
+          </div>
+          <a href="#" class="btn">Create an account</a>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

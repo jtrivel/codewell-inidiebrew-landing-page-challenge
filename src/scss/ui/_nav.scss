@@ -1,0 +1,152 @@
+@use '../base/variables' as v ;
+@use '../base/mixins' as m ;
+
+.nav { 
+  padding: 2rem 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__icon {
+    font-size: 3rem;
+    cursor: pointer;
+    @include m.tablet { 
+      display: none;
+    }
+  }
+
+  #check {
+    display: none; 
+  }
+
+  &__menu {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 140rem;
+    width: 95%;
+    margin-inline: auto ;
+    background-color: v.$burgerBg;
+    padding: 4rem;
+    border-radius: 1rem;
+    transform: scale(0);
+    transition: all 250ms ease;
+    @include m.tablet { 
+      position: relative;
+      top: 0;
+      max-width: none;
+      width: auto;
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      transform: scale(1);
+     }
+  }
+
+  #check:checked ~ &__menu {
+    transform: scale(1);
+  }
+
+  &__bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @include m.tablet { 
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+
+  &__link {
+    color: v.$white;
+    font-weight: 700;
+    @include m.tablet { 
+      color: v.$primaryColor;
+      font-weight: 400;
+      position: relative;
+      transition: all 250ms ease;
+      &:hover {
+        color: v.$tertiaryColor;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        left: -.5rem;
+        top: 0;
+        border-top: 1px solid v.$tertiaryColor;
+        border-left: 1px solid v.$tertiaryColor;
+        transform: scaleY(0);
+        transition: all 250ms ease;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        right: -.5rem;
+        bottom: 0;
+        border-bottom: 1px solid v.$tertiaryColor;
+        border-right: 1px solid v.$tertiaryColor;
+        transform: scaleY(0);
+        transition: all 250ms ease;
+      }
+      &:hover::before,
+      &:hover::after {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    cursor: pointer;
+  }
+
+  &__arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1;
+    margin-right: 1rem;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 150%;
+      height: 100%;
+      background-color: v.$secondaryBg;
+      padding: 1rem;
+      border-radius: .5rem;
+      border: 1px solid v.$primaryColor;
+      z-index: -1;
+    }
+  }
+
+  &__back {
+    display: none;
+    @include m.tablet { 
+      display:block;
+      font-weight: 700;
+      color: v.$primaryColor;
+      cursor: pointer;
+    }
+  }
+
+
+}
+
